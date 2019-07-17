@@ -8,13 +8,15 @@
 
 import UIKit
 import MessageUI
+import SafariServices
 
 class ContactUsViewController: UIViewController {
     
     enum ContactUsRows: Int {
-        case email = 0
-        case telephone = 1
-        case telegram = 2
+        case directMessage = 0
+        case email = 1
+        case telephone = 2
+        case telegram = 3
     }
     
     private var tableView: UITableView!
@@ -80,6 +82,11 @@ extension ContactUsViewController: UITableViewDataSource {
         var cell: UITableViewCell!
         
         switch row {
+        case .directMessage:
+            cell = subtitleCell(tableView)
+            cell.textLabel?.text = l10n("message_us")
+            cell.detailTextLabel?.text = l10n("via_the_web")
+            cell.imageView?.image = #imageLiteral(resourceName: "baseline_message_white_24pt")
         case .email:
             cell = subtitleCell(tableView)
             cell.textLabel?.text = l10n("email_us")
@@ -88,7 +95,7 @@ extension ContactUsViewController: UITableViewDataSource {
         case .telephone:
             cell = subtitleCell(tableView)
             cell.textLabel?.text = l10n("call_us")
-            cell.detailTextLabel?.text = "+1-703-671-8888"
+            cell.detailTextLabel?.text = l10n("pbms_phone_number_msg")
             cell.imageView?.image = #imageLiteral(resourceName: "baseline_call_white_24pt")
         case .telegram:
             cell = regularCell(tableView)
@@ -109,6 +116,11 @@ extension ContactUsViewController: UITableViewDelegate {
         }
         
         switch row {
+        case .directMessage:
+            let url = URL(string: "https://persianbahaimedia.org/%d8%aa%d9%85%d8%a7%d8%b3-%d8%a8%d8%a7-%d9%85%d8%a7/")!
+            let svc = SFSafariViewController(url: url)
+            svc.preferredBarTintColor = UIColor.pbmsBlack
+            navigationController?.present(svc, animated: true, completion: nil)
         case .email:
             if MFMailComposeViewController.canSendMail() {
                 let mcvc = MFMailComposeViewController()

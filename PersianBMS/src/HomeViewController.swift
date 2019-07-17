@@ -80,6 +80,13 @@ class HomeViewController: UIViewController {
         super.viewWillAppear(animated)
 
         navigationController?.setToolbarHidden(false, animated: animated)
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        navigationController?.setToolbarHidden(false, animated: animated)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

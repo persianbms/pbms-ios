@@ -100,8 +100,8 @@ class SatelliteInfoViewController: UIViewController {
         case radioIranEurope = 1
         case radioNorthAmerica = 2
         case tvBroadcastTitle = 3
-        case tvNovin = 4
-        case tvAeene = 5
+        case tvNoveen = 4
+        case tvAinBahai = 5
     }
     
     private var collectionView: UICollectionView!
@@ -176,14 +176,14 @@ FEC: 3/4
         case .tvBroadcastTitle:
             let titleCell = cell as! SatelliteInfoTitleCell
             titleCell.title.text = l10n("tv_schedule")
-        case .tvNovin:
+        case .tvNoveen:
             let bodyCell = cell as! SatelliteInfoBodyCell
-            bodyCell.title.text = l10n("novin_tv")
-            bodyCell.body.text = "novin\ninfo"
-        case .tvAeene:
+            bodyCell.title.text = l10n("noveen_tv")
+            bodyCell.body.text = l10n("noveen_tv_schedule_msg")
+        case .tvAinBahai:
             let bodyCell = cell as! SatelliteInfoBodyCell
-            bodyCell.title.text = l10n("aeene_tv")
-            bodyCell.body.text = "Aeene\ninfo"
+            bodyCell.title.text = l10n("ain_bahai_tv")
+            bodyCell.body.text = l10n("ain_bahai_tv_schedule_msg")
         }
     }
 }
@@ -215,11 +215,11 @@ extension SatelliteInfoViewController: UICollectionViewDataSource {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "title", for: indexPath) as! SatelliteInfoTitleCell
             configureCell(cell, row)
             return cell
-        case .tvNovin:
+        case .tvNoveen:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "body", for: indexPath) as! SatelliteInfoBodyCell
             configureCell(cell, row)
             return cell
-        case .tvAeene:
+        case .tvAinBahai:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "body", for: indexPath) as! SatelliteInfoBodyCell
             configureCell(cell, row)
             return cell

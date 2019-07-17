@@ -29,5 +29,10 @@
 "iran_and_europe" = "Iran and Europe";
 "north_america" = "North America";
 "tv_schedule" = "TV schedule";
-"novin_tv" = "Novin TV";
-"aeene_tv" = "Aeene TV";
+"noveen_tv" = "Noveen TV";
+"ain_bahai_tv" = "Ain Bahá'í TV";
+"noveen_tv_schedule_msg" = "On Andisheh TV\nThu 21:30 Tehran Time\nFri 12:30 Tehran Time\n\nOn ParsTV\nMon 18:30 Tehran Time\nWed 16:30 Tehran Time";
+"ain_bahai_tv_schedule_msg" = "On Andisheh TV\nTue 22:30 Tehran Time\nWed 12:30 Tehran Time\n\nOn ParsTV\nSat 16:30 Tehran Time\nSun 18:30 Tehran Time";
+"message_us" = "Message us";
+"via_the_web" = "Via the web";
+"pbms_phone_number_msg" = "+1-703-671-8888";

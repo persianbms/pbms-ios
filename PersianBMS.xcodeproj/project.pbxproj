@@ -21,7 +21,6 @@
 		5BD3613822CC36C900FFBE94 /* live-stream-artwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BD3613722CC36C900FFBE94 /* live-stream-artwork.png */; };
 		5BD3614122CD869A00FFBE94 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BD3613F22CD869A00FFBE94 /* Localizable.strings */; };
 		5BD3614522CD86B800FFBE94 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BD3614322CD86B800FFBE94 /* Localizable.strings */; };
-		5BD3614722CD88EA00FFBE94 /* PBMSUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD3614622CD88EA00FFBE94 /* PBMSUI.swift */; };
 		5BD3614922CD8B2D00FFBE94 /* AboutTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD3614822CD8B2D00FFBE94 /* AboutTableHeaderView.swift */; };
 		5BD3614B22CDCAA000FFBE94 /* pbms-logo-transparent-102w.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BD3614A22CDCAA000FFBE94 /* pbms-logo-transparent-102w.png */; };
 		5BD8A32F22D9606800D043CE /* LiveStreamManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD8A32E22D9606800D043CE /* LiveStreamManager.swift */; };
@@ -34,6 +33,7 @@
 		5BD8A34222DAFD0F00D043CE /* PodcastsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD8A34122DAFD0F00D043CE /* PodcastsViewController.swift */; };
 		5BD8A34422DAFDD900D043CE /* podcast-24pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BD8A34322DAFDD900D043CE /* podcast-24pt@3x.png */; };
 		5BD8A34622DC3F2600D043CE /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD8A34522DC3F2600D043CE /* AboutView.swift */; };
+		5BD8A34A22DFD29000D043CE /* PBMSUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD8A34922DFD29000D043CE /* PBMSUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +87,7 @@
 		5BD8A34122DAFD0F00D043CE /* PodcastsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsViewController.swift; sourceTree = "<group>"; };
 		5BD8A34322DAFDD900D043CE /* podcast-24pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "podcast-24pt@3x.png"; sourceTree = "<group>"; };
 		5BD8A34522DC3F2600D043CE /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		5BD8A34922DFD29000D043CE /* PBMSUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBMSUI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +146,7 @@
 				5BD3610222CBF82E00FFBE94 /* Assets.xcassets */,
 				5BD3610422CBF82E00FFBE94 /* LaunchScreen.storyboard */,
 				5BD3610722CBF82E00FFBE94 /* Info.plist */,
+				5BD3614622CD88EA00FFBE94 /* PBMSUI.swift */,
 			);
 			path = PersianBMS;
 			sourceTree = "<group>";
@@ -181,7 +183,7 @@
 				5BD8A32E22D9606800D043CE /* LiveStreamManager.swift */,
 				5BD3613422CC1C3100FFBE94 /* LiveStreamView.swift */,
 				5BD3613222CC0C9C00FFBE94 /* LiveStreamViewController.swift */,
-				5BD3614622CD88EA00FFBE94 /* PBMSUI.swift */,
+				5BD8A34922DFD29000D043CE /* PBMSUI.swift */,
 				5BD8A34122DAFD0F00D043CE /* PodcastsViewController.swift */,
 				5BD8A33B22DACE4200D043CE /* SatelliteInfoViewController.swift */,
 				5BD8A33922DAB97500D043CE /* SocialNetworks.swift */,
@@ -388,8 +390,8 @@
 				5BD360FC22CBF82D00FFBE94 /* AppDelegate.swift in Sources */,
 				5BD8A33822DA96A400D043CE /* ContactUsViewController.swift in Sources */,
 				5BD3612B22CBF9FE00FFBE94 /* HomeViewController.swift in Sources */,
-				5BD3614722CD88EA00FFBE94 /* PBMSUI.swift in Sources */,
 				5BD3613522CC1C3100FFBE94 /* LiveStreamView.swift in Sources */,
+				5BD8A34A22DFD29000D043CE /* PBMSUI.swift in Sources */,
 				5BD3613122CC05C600FFBE94 /* AboutViewController.swift in Sources */,
 				5BD8A32F22D9606800D043CE /* LiveStreamManager.swift in Sources */,
 			);
