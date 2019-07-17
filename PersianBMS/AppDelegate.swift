@@ -28,10 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let hvc = HomeViewController()
 //        let pvc = PodcastsViewController()
         let avc = UINavigationController(rootViewController: AboutViewController())
-        var controllers = [hvc, /*pvc,*/ avc]
-        if UIApplication.shared.userInterfaceLayoutDirection == .rightToLeft {
-            controllers.reverse()
-        }
+        let controllers = [hvc, avc]
         
         let tabBar = UITabBarController(nibName: nil, bundle: nil)
         tabBar.tabBar.barTintColor = UIColor.pbmsBlack

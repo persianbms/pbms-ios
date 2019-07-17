@@ -22,7 +22,7 @@ class AboutViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
         
         self.title = l10n("about")
-        self.tabBarItem = UITabBarItem(title: l10n("about"), image: #imageLiteral(resourceName: "outline_info_black_24pt"), tag: 3)
+        self.tabBarItem = UITabBarItem(title: l10n("about"), image: #imageLiteral(resourceName: "outline_info_black_24pt"), tag: 15)
     }
     
     required init?(coder aDecoder: NSCoder) {

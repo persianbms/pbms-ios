@@ -31,11 +31,9 @@
 		5BD8A33822DA96A400D043CE /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD8A33722DA96A400D043CE /* ContactUsViewController.swift */; };
 		5BD8A33A22DAB97500D043CE /* SocialNetworks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD8A33922DAB97500D043CE /* SocialNetworks.swift */; };
 		5BD8A33C22DACE4200D043CE /* SatelliteInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD8A33B22DACE4200D043CE /* SatelliteInfoViewController.swift */; };
-		5BD8A33E22DAF3B600D043CE /* SatelliteInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD8A33D22DAF3B600D043CE /* SatelliteInfoView.swift */; };
 		5BD8A34222DAFD0F00D043CE /* PodcastsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD8A34122DAFD0F00D043CE /* PodcastsViewController.swift */; };
 		5BD8A34422DAFDD900D043CE /* podcast-24pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BD8A34322DAFDD900D043CE /* podcast-24pt@3x.png */; };
 		5BD8A34622DC3F2600D043CE /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD8A34522DC3F2600D043CE /* AboutView.swift */; };
-		5BD8A34822DEC33700D043CE /* SatelliteSectionBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD8A34722DEC33700D043CE /* SatelliteSectionBodyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,11 +84,9 @@
 		5BD8A33722DA96A400D043CE /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		5BD8A33922DAB97500D043CE /* SocialNetworks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetworks.swift; sourceTree = "<group>"; };
 		5BD8A33B22DACE4200D043CE /* SatelliteInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteInfoViewController.swift; sourceTree = "<group>"; };
-		5BD8A33D22DAF3B600D043CE /* SatelliteInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteInfoView.swift; sourceTree = "<group>"; };
 		5BD8A34122DAFD0F00D043CE /* PodcastsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsViewController.swift; sourceTree = "<group>"; };
 		5BD8A34322DAFDD900D043CE /* podcast-24pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "podcast-24pt@3x.png"; sourceTree = "<group>"; };
 		5BD8A34522DC3F2600D043CE /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
-		5BD8A34722DEC33700D043CE /* SatelliteSectionBodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteSectionBodyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,24 +170,22 @@
 		5BD3612922CBF89600FFBE94 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				5BD3612A22CBF9FE00FFBE94 /* HomeViewController.swift */,
-				5BD3612C22CBFB1600FFBE94 /* HomeView.swift */,
-				5BD3612E22CC022800FFBE94 /* Utils.swift */,
-				5BD3613022CC05C600FFBE94 /* AboutViewController.swift */,
-				5BD3613222CC0C9C00FFBE94 /* LiveStreamViewController.swift */,
-				5BD3613422CC1C3100FFBE94 /* LiveStreamView.swift */,
-				5BD3614622CD88EA00FFBE94 /* PBMSUI.swift */,
 				5BD3614822CD8B2D00FFBE94 /* AboutTableHeaderView.swift */,
-				5BD8A32E22D9606800D043CE /* LiveStreamManager.swift */,
-				5BD8A33022D966F900D043CE /* LiveStreamBar.swift */,
 				5BD8A33222D9E0AB00D043CE /* AboutUsViewController.swift */,
-				5BD8A33722DA96A400D043CE /* ContactUsViewController.swift */,
-				5BD8A33922DAB97500D043CE /* SocialNetworks.swift */,
-				5BD8A33B22DACE4200D043CE /* SatelliteInfoViewController.swift */,
-				5BD8A33D22DAF3B600D043CE /* SatelliteInfoView.swift */,
-				5BD8A34122DAFD0F00D043CE /* PodcastsViewController.swift */,
 				5BD8A34522DC3F2600D043CE /* AboutView.swift */,
-				5BD8A34722DEC33700D043CE /* SatelliteSectionBodyView.swift */,
+				5BD3613022CC05C600FFBE94 /* AboutViewController.swift */,
+				5BD8A33722DA96A400D043CE /* ContactUsViewController.swift */,
+				5BD3612C22CBFB1600FFBE94 /* HomeView.swift */,
+				5BD3612A22CBF9FE00FFBE94 /* HomeViewController.swift */,
+				5BD8A33022D966F900D043CE /* LiveStreamBar.swift */,
+				5BD8A32E22D9606800D043CE /* LiveStreamManager.swift */,
+				5BD3613422CC1C3100FFBE94 /* LiveStreamView.swift */,
+				5BD3613222CC0C9C00FFBE94 /* LiveStreamViewController.swift */,
+				5BD3614622CD88EA00FFBE94 /* PBMSUI.swift */,
+				5BD8A34122DAFD0F00D043CE /* PodcastsViewController.swift */,
+				5BD8A33B22DACE4200D043CE /* SatelliteInfoViewController.swift */,
+				5BD8A33922DAB97500D043CE /* SocialNetworks.swift */,
+				5BD3612E22CC022800FFBE94 /* Utils.swift */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -199,9 +193,9 @@
 		5BD3613622CC36B000FFBE94 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				5BD8A34322DAFDD900D043CE /* podcast-24pt@3x.png */,
-				5BD3614A22CDCAA000FFBE94 /* pbms-logo-transparent-102w.png */,
 				5BD3613722CC36C900FFBE94 /* live-stream-artwork.png */,
+				5BD3614A22CDCAA000FFBE94 /* pbms-logo-transparent-102w.png */,
+				5BD8A34322DAFDD900D043CE /* podcast-24pt@3x.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -381,7 +375,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BD8A33E22DAF3B600D043CE /* SatelliteInfoView.swift in Sources */,
 				5BD3614922CD8B2D00FFBE94 /* AboutTableHeaderView.swift in Sources */,
 				5BD3612F22CC022800FFBE94 /* Utils.swift in Sources */,
 				5BD8A33C22DACE4200D043CE /* SatelliteInfoViewController.swift in Sources */,
@@ -389,7 +382,6 @@
 				5BD3612D22CBFB1600FFBE94 /* HomeView.swift in Sources */,
 				5BD8A33A22DAB97500D043CE /* SocialNetworks.swift in Sources */,
 				5BD3613322CC0C9C00FFBE94 /* LiveStreamViewController.swift in Sources */,
-				5BD8A34822DEC33700D043CE /* SatelliteSectionBodyView.swift in Sources */,
 				5BD8A34222DAFD0F00D043CE /* PodcastsViewController.swift in Sources */,
 				5BD8A33322D9E0AB00D043CE /* AboutUsViewController.swift in Sources */,
 				5BD8A33122D966F900D043CE /* LiveStreamBar.swift in Sources */,
