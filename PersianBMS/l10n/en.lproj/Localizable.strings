@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  PersianBMS
+
+  Created by Arash on 7/3/19.
+  Copyright © 2019 PersianBMS. All rights reserved.
+*/
+"about" = "About";
+"about_us" = "About us";
+"contact_us" = "Contact us";
+"satellite_broadcast_information" = "Satellite broadcast information";
+"telegram" = "Telegram";
+"instagram" = "Instagram";
+"facebook" = "Facebook";
+"youtube" = "YouTube";
+"soundcloud" = "SoundCloud";
+"twitter" = "Twitter";
+"follow_us" = "Follow us";
+"persianbms_radio" = "PersianBMS radio";
+"home" = "Home";
+"live" = "Live";
+"persianbms" = "PersianBMS";
+"live_stream" = "Live stream";
+"call_us" = "Call us";
+"email_us" = "Email us";
+"satellite_info" = "Satellite info";
+"podcasts" = "Podcasts";
