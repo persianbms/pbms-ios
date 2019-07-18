@@ -15,8 +15,6 @@ class HomeViewController: UIViewController {
     
     let acceptableHostSuffixes: [String] = ["persianbahaimedia.org", "addtoany.com"]
     private var homeView: HomeView!
-    private var backButton: UIBarButtonItem!
-    private var forwardButton: UIBarButtonItem!
     
     // need to retain this somewhere in memory so the observation isn't removed
     private var estimatedProgressObserver: NSKeyValueObservation?
@@ -26,15 +24,6 @@ class HomeViewController: UIViewController {
         
         self.title = l10n("home")
         self.tabBarItem = UITabBarItem(title: l10n("home"), image: #imageLiteral(resourceName: "outline_home_black_24pt"), tag: 1)
-        
-        backButton = UIBarButtonItem(image: #imageLiteral(resourceName: "outline_arrow_back_ios_black_24pt"), style: .plain, target: self, action: #selector(onBackAction))
-        backButton.isEnabled = false
-        forwardButton = UIBarButtonItem(image: #imageLiteral(resourceName: "outline_arrow_forward_ios_black_24pt"), style: .plain, target: self, action: #selector(onForwardAction))
-        forwardButton.isEnabled = false
-        let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let reloadButton = UIBarButtonItem(image: #imageLiteral(resourceName: "outline_refresh_black_24pt"), style: .plain, target: self, action: #selector(onReloadAction))
-        self.toolbarItems = [backButton, forwardButton, space, reloadButton]
-//        self.hidesBottomBarWhenPushed = false
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -42,7 +31,7 @@ class HomeViewController: UIViewController {
     }
     
     override func loadView() {
-        homeView = HomeView()
+        homeView = HomeView(self)
         homeView.webView.navigationDelegate = self
         homeView.webView.uiDelegate = self
         
@@ -50,8 +39,8 @@ class HomeViewController: UIViewController {
     }
     
     private func updateToolbarItemsState() {
-        backButton.isEnabled = homeView.webView.canGoBack
-        forwardButton.isEnabled = homeView.webView.canGoForward
+        homeView.backButton.isEnabled = homeView.webView.canGoBack
+        homeView.forwardButton.isEnabled = homeView.webView.canGoForward
     }
     
     override func viewDidLoad() {
@@ -76,34 +65,21 @@ class HomeViewController: UIViewController {
         edgesForExtendedLayout = []
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        navigationController?.setToolbarHidden(false, animated: animated)
-        
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        navigationController?.setToolbarHidden(false, animated: animated)
-    }
-    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
     // MARK: User action handlers
     
-    @objc private func onBackAction() {
+    @objc func onBackAction() {
         homeView.webView.goBack()
     }
     
-    @objc private func onForwardAction() {
+    @objc func onForwardAction() {
         homeView.webView.goForward()
     }
     
-    @objc private func onReloadAction() {
+    @objc func onReloadAction() {
         homeView.webView.reloadFromOrigin()
     }
 }
@@ -113,7 +89,6 @@ extension HomeViewController: WKNavigationDelegate {
     
     // TODO: handle navigating off site/domain
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        print("should nav to \(navigationAction.request.url?.absoluteString ?? "empty")")
         guard let url = navigationAction.request.url else {
             decisionHandler(.allow)
             return
@@ -128,7 +103,6 @@ extension HomeViewController: WKNavigationDelegate {
         // easy decision
         if scheme == "mailto" {
             decisionHandler(.cancel)
-            print("external nav to: \(url.absoluteString)")
             UIPasteboard.general.string = url.absoluteString
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
             return
@@ -169,5 +143,36 @@ extension HomeViewController: WKNavigationDelegate {
 }
 
 extension HomeViewController: WKUIDelegate {
-    // TODO: handle javascript pop ups
+    
+    func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Void) {
+        let ac = UIAlertController(title: "\(frame.request.url!.host!) says:", message: message, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: l10n("ok"), style: .default, handler: { (action) in
+            completionHandler()
+        }))
+        present(ac, animated: true, completion: nil)
+    }
+    
+    func webView(_ webView: WKWebView, runJavaScriptConfirmPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (Bool) -> Void) {
+        let ac = UIAlertController(title: "\(frame.request.url!.host!) says:", message: message, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: l10n("ok"), style: .default, handler: { (action) in
+            completionHandler(true)
+        }))
+        ac.addAction(UIAlertAction(title: l10n("cancel"), style: .cancel, handler: { (action) in
+            completionHandler(false)
+        }))
+        present(ac, animated: true, completion: nil)
+    }
+    
+    func webView(_ webView: WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: String, defaultText: String?, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (String?) -> Void) {
+        let ac = UIAlertController(title: "\(frame.request.url!.host!) asks:", message: prompt, preferredStyle: .alert)
+        ac.addTextField { (tf) in
+            tf.placeholder = defaultText
+        }
+        ac.addAction(UIAlertAction(title: l10n("ok"), style: .default, handler: { (action) in
+            completionHandler(ac.textFields![0].text!)
+        }))
+        ac.addAction(UIAlertAction(title: l10n("cancel"), style: .cancel, handler: { (action) in
+            completionHandler(nil)
+        }))
+    }
 }
