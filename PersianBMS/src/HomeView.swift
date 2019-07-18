@@ -34,6 +34,8 @@ class HomeView: UIView {
         progressBar.progress = 0
         
         toolbar = UIToolbar(frame: .zero)
+        toolbar.barTintColor = UIColor.pbmsBlack
+        toolbar.tintColor = UIColor.pbmsLightBlue
         toolbar.translatesAutoresizingMaskIntoConstraints = false
         backButton = UIBarButtonItem(image: #imageLiteral(resourceName: "outline_arrow_back_ios_black_24pt"), style: .plain, target: controller, action: #selector(HomeViewController.onBackAction))
         backButton.isEnabled = false

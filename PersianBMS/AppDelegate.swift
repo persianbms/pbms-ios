@@ -28,10 +28,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let hvc = HomeViewController()
 //        let pvc = PodcastsViewController()
         let avc = UINavigationController(rootViewController: AboutViewController())
+        avc.navigationBar.barTintColor = UIColor.pbmsBlack
+        avc.navigationBar.tintColor = UIColor.pbmsLightBlue
         let controllers = [hvc, avc]
         
         let tabBar = UITabBarController(nibName: nil, bundle: nil)
         tabBar.tabBar.barTintColor = UIColor.pbmsBlack
+        tabBar.tabBar.tintColor = UIColor.pbmsLightBlue
         tabBar.viewControllers = controllers
         tabBar.selectedViewController = hvc
         

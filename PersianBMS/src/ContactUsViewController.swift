@@ -56,6 +56,7 @@ extension ContactUsViewController: UITableViewDataSource {
             cell?.backgroundColor = UIColor.pbmsGray
             cell?.textLabel?.textColor = UIColor.white
             cell?.detailTextLabel?.textColor = UIColor.white
+            cell?.imageView?.tintColor = UIColor.pbmsLightBlue
         }
         return cell!
     }
@@ -66,12 +67,13 @@ extension ContactUsViewController: UITableViewDataSource {
             cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
             cell?.backgroundColor = UIColor.pbmsGray
             cell?.textLabel?.textColor = UIColor.white
+            cell?.imageView?.tintColor = UIColor.pbmsLightBlue
         }
         return cell!
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
