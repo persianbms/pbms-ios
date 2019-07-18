@@ -45,7 +45,12 @@ class HomeView: UIView {
         smallSpace.width = 48
         let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let reloadButton = UIBarButtonItem(image: #imageLiteral(resourceName: "outline_refresh_black_24pt"), style: .plain, target: controller, action: #selector(HomeViewController.onReloadAction))
-        toolbar.items = [backButton, smallSpace, forwardButton, space, reloadButton]
+        var items = [backButton, smallSpace, forwardButton, space, reloadButton]
+        if UIApplication.shared.userInterfaceLayoutDirection == .rightToLeft {
+            // reverse them, to cancel out the reversal iOS applies
+            items.reverse()
+        }
+        toolbar.items = items
         
         liveStreamBar = LiveStreamBar(LiveStreamManager.shared)
         
@@ -77,10 +82,11 @@ class HomeView: UIView {
         ])
 
         toolbar.sizeToFit()
+        // we don't want the toolbar items to get flipped based on language direction
         NSLayoutConstraint.activate([
             toolbar.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            toolbar.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            toolbar.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            toolbar.leftAnchor.constraint(equalTo: self.leftAnchor),
+            toolbar.rightAnchor.constraint(equalTo: self.rightAnchor),
             toolbar.heightAnchor.constraint(equalToConstant: toolbar.bounds.size.height),
         ])
         
