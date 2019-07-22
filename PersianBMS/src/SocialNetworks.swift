@@ -22,7 +22,8 @@ class SocialNetworks {
     static private let appUrls: [SocialNetwork:String] = [
         .telegram: "tg://resolve?domain=Persianbms",
         .instagram: "instagram://persianbms",
-        .facebook: "fb://profile/persianbms",
+//        .facebook: "fb://profile/persianbms",
+        .facebook: "https://www.facebook.com/Persianbms",
         .youtube: "youtube://www.youtube.com/channel/UCZGvidZW7-YTVG7PY3-xw1A",
         .soundcloud: "soundcloud://users/persianbms",
         .twitter: "twitter://user?screen_name=persianbms",
