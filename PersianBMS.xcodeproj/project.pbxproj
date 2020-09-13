@@ -577,6 +577,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 28;
 				DEVELOPMENT_TEAM = W4H8GJ838M;
 				INFOPLIST_FILE = PersianBMS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
@@ -584,6 +585,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bahai.radio.Payam-e-Doost";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -596,6 +598,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 28;
 				DEVELOPMENT_TEAM = W4H8GJ838M;
 				INFOPLIST_FILE = PersianBMS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
@@ -603,6 +606,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bahai.radio.Payam-e-Doost";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

@@ -13,7 +13,7 @@ import CoreText
 
 class HomeViewController: UIViewController {
     
-    let acceptableHostSuffixes: [String] = ["persianbahaimedia.org", "addtoany.com"]
+    let acceptableHostSuffixes: [String] = ["persianbahaimedia.org", "addtoany.com", "vimeo.com"]
     private var homeView: HomeView!
     
     // need to retain this somewhere in memory so the observation isn't removed
@@ -144,6 +144,16 @@ extension HomeViewController: WKNavigationDelegate {
 
 extension HomeViewController: WKUIDelegate {
     
+    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+        guard let url = navigationAction.request.url else {
+            return nil
+        }
+
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+
+        return nil
+    }
+
     func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Void) {
         let ac = UIAlertController(title: "\(frame.request.url!.host!) says:", message: message, preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: l10n("ok"), style: .default, handler: { (action) in
