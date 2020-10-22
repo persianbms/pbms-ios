@@ -12,8 +12,7 @@ class AboutViewController: UIViewController {
     
     enum AboutSections: Int {
         case aboutAndContact = 0
-        case satelliteInfo = 1
-        case socialNetworks = 2
+        case socialNetworks = 1
     }
     
     private var tableView: UITableView!
@@ -35,16 +34,6 @@ class AboutViewController: UIViewController {
         aboutView.tableView.delegate = self
         aboutView.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
-//        tableView = UITableView(frame: .zero, style: .grouped)
-//        tableView.backgroundColor = UIColor.pbmsBlack
-//        tableView.dataSource = self
-//        tableView.delegate = self
-//        let header = AboutTableHeaderView()
-//        let hdrSize = header.preferredSize()
-//        header.bounds = CGRect(x: 0, y: 0, width: hdrSize.width, height: hdrSize.height)
-//        tableView.tableHeaderView = header
-//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        
         view = aboutView
     }
     
@@ -59,7 +48,7 @@ class AboutViewController: UIViewController {
 
 extension AboutViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -69,8 +58,6 @@ extension AboutViewController: UITableViewDataSource {
         switch sec {
         case .aboutAndContact:
             return 2
-        case .satelliteInfo:
-            return 1
         case .socialNetworks:
             return 6
         }
@@ -89,8 +76,6 @@ extension AboutViewController: UITableViewDataSource {
         switch section {
         case .aboutAndContact:
             configureAboutAndContactRow(cell, indexPath.row)
-        case .satelliteInfo:
-            configureSatelliteInfoRow(cell)
         case .socialNetworks:
             configureSocialNetworkRow(cell, indexPath.row)
         }
@@ -107,12 +92,7 @@ extension AboutViewController: UITableViewDataSource {
             cell.textLabel?.text = l10n("contact_us")
         }
     }
-    
-    func configureSatelliteInfoRow(_ cell: UITableViewCell) {
-        cell.accessoryType = .disclosureIndicator
-        cell.textLabel?.text = l10n("satellite_broadcast_information")
-    }
-    
+
     func configureSocialNetworkRow(_ cell: UITableViewCell, _ row: Int) {
         cell.accessoryType = .none
         cell.textLabel?.text = "social network \(row)"
@@ -136,9 +116,9 @@ extension AboutViewController: UITableViewDataSource {
         case .soundcloud:
             cell.textLabel?.text = l10n("soundcloud")
             cell.imageView?.image = #imageLiteral(resourceName: "icSoundcloud29Pt")
-        case .twitter:
-            cell.textLabel?.text = l10n("twitter")
-            cell.imageView?.image = #imageLiteral(resourceName: "icTwitter29Pt")
+        case .whatsapp:
+            cell.textLabel?.text = l10n("whatsapp")
+            cell.imageView?.image = #imageLiteral(resourceName: "icWhatsApp29Pt")
         }
         
         cell.imageView?.bounds = CGRect(x: 0, y: 0, width: 24, height: 24)
@@ -173,9 +153,6 @@ extension AboutViewController: UITableViewDelegate {
                 let cuvc = ContactUsViewController()
                 navigationController?.pushViewController(cuvc, animated: true)
             }
-        case .satelliteInfo:
-            let sivc = SatelliteInfoViewController()
-            navigationController?.pushViewController(sivc, animated: true)
         case .socialNetworks:
             guard let network = SocialNetwork(rawValue: indexPath.row) else {
                 fatalError("\(indexPath.row) is an unknown social network row")

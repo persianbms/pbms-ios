@@ -29,7 +29,6 @@
 		5BD8A33622DA66AB00D043CE /* about_us-fa.html in Resources */ = {isa = PBXBuildFile; fileRef = 5BD8A33522DA66AB00D043CE /* about_us-fa.html */; };
 		5BD8A33822DA96A400D043CE /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD8A33722DA96A400D043CE /* ContactUsViewController.swift */; };
 		5BD8A33A22DAB97500D043CE /* SocialNetworks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD8A33922DAB97500D043CE /* SocialNetworks.swift */; };
-		5BD8A33C22DACE4200D043CE /* SatelliteInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD8A33B22DACE4200D043CE /* SatelliteInfoViewController.swift */; };
 		5BD8A34222DAFD0F00D043CE /* PodcastsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD8A34122DAFD0F00D043CE /* PodcastsViewController.swift */; };
 		5BD8A34422DAFDD900D043CE /* podcast-24pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BD8A34322DAFDD900D043CE /* podcast-24pt@3x.png */; };
 		5BD8A34622DC3F2600D043CE /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD8A34522DC3F2600D043CE /* AboutView.swift */; };
@@ -82,7 +81,6 @@
 		5BD8A33522DA66AB00D043CE /* about_us-fa.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "about_us-fa.html"; sourceTree = "<group>"; };
 		5BD8A33722DA96A400D043CE /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		5BD8A33922DAB97500D043CE /* SocialNetworks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetworks.swift; sourceTree = "<group>"; };
-		5BD8A33B22DACE4200D043CE /* SatelliteInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteInfoViewController.swift; sourceTree = "<group>"; };
 		5BD8A34122DAFD0F00D043CE /* PodcastsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsViewController.swift; sourceTree = "<group>"; };
 		5BD8A34322DAFDD900D043CE /* podcast-24pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "podcast-24pt@3x.png"; sourceTree = "<group>"; };
 		5BD8A34522DC3F2600D043CE /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
@@ -183,7 +181,6 @@
 				5BD3613222CC0C9C00FFBE94 /* LiveStreamViewController.swift */,
 				5BD8A34922DFD29000D043CE /* PBMSUI.swift */,
 				5BD8A34122DAFD0F00D043CE /* PodcastsViewController.swift */,
-				5BD8A33B22DACE4200D043CE /* SatelliteInfoViewController.swift */,
 				5BD8A33922DAB97500D043CE /* SocialNetworks.swift */,
 				5BD3612E22CC022800FFBE94 /* Utils.swift */,
 			);
@@ -377,7 +374,6 @@
 			files = (
 				5BD3614922CD8B2D00FFBE94 /* AboutTableHeaderView.swift in Sources */,
 				5BD3612F22CC022800FFBE94 /* Utils.swift in Sources */,
-				5BD8A33C22DACE4200D043CE /* SatelliteInfoViewController.swift in Sources */,
 				5BD8A34622DC3F2600D043CE /* AboutView.swift in Sources */,
 				5BD3612D22CBFB1600FFBE94 /* HomeView.swift in Sources */,
 				5BD8A33A22DAB97500D043CE /* SocialNetworks.swift in Sources */,
@@ -582,7 +578,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = 3HDTD4H95Q;
 				INFOPLIST_FILE = PersianBMS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -605,7 +601,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = 3HDTD4H95Q;
 				INFOPLIST_FILE = PersianBMS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;

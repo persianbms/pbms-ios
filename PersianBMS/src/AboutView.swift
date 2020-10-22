@@ -72,26 +72,5 @@ class AboutView: UIView {
         
         
     }
-//    override func layoutSubviews() {
-//        super.layoutSubviews()
-//
-//        var safeTop: CGFloat = 0
-//        if #available(iOS 11.0, *) {
-//            safeTop = safeAreaInsets.top
-//        }
-//
-//        liveStreamBar.frame = CGRect(x: 0,
-//                                     y: safeTop,
-//                                     width: bounds.width,
-//                                     height: 64)
-//
-//        let hdrView = tableView.tableHeaderView as! AboutTableHeaderView
-//        let size = hdrView.preferredSize()
-//        hdrView.bounds = CGRect(x: 0, y: 0, width: size.width, height: size.height)
-//        tableView.frame = CGRect(x: 0,
-//                                 y: liveStreamBar.frame.maxY,
-//                                 width: bounds.width,
-//                                 height: bounds.height - liveStreamBar.frame.maxY)
-//    }
     
 }

@@ -14,7 +14,7 @@ enum SocialNetwork: Int {
     case facebook = 2
     case youtube = 3
     case soundcloud = 4
-    case twitter = 5
+    case whatsapp = 5
 }
 
 class SocialNetworks {
@@ -22,11 +22,10 @@ class SocialNetworks {
     static private let appUrls: [SocialNetwork:String] = [
         .telegram: "tg://resolve?domain=Persianbms",
         .instagram: "instagram://persianbms",
-//        .facebook: "fb://profile/persianbms",
         .facebook: "https://www.facebook.com/Persianbms",
         .youtube: "youtube://www.youtube.com/channel/UCZGvidZW7-YTVG7PY3-xw1A",
         .soundcloud: "soundcloud://users/persianbms",
-        .twitter: "twitter://user?screen_name=persianbms",
+        .whatsapp: "https://wa.me/12405602414",
     ]
     
     static private let webUrls: [SocialNetwork:String] = [
@@ -35,7 +34,7 @@ class SocialNetworks {
         .facebook: "https://www.facebook.com/Persianbms",
         .youtube: "https://www.youtube.com/channel/UCZGvidZW7-YTVG7PY3-xw1A",
         .soundcloud: "https://soundcloud.com/Persianbms",
-        .twitter: "https://twitter.com/Persianbms",
+        .whatsapp: "https://wa.me/12405602414",
     ]
     
     class func open(_ network: SocialNetwork) {
