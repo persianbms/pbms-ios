@@ -17,6 +17,7 @@ class ContactUsViewController: UIViewController {
         case email = 1
         case telephone = 2
         case telegram = 3
+        case whatsapp = 4
     }
     
     private var tableView: UITableView!
@@ -73,7 +74,7 @@ extension ContactUsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -103,6 +104,11 @@ extension ContactUsViewController: UITableViewDataSource {
             cell = regularCell(tableView)
             cell.textLabel?.text = l10n("telegram")
             cell.imageView?.image = #imageLiteral(resourceName: "icTelegram29Pt")
+        case .whatsapp:
+            cell = subtitleCell(tableView)
+            cell.textLabel?.text = l10n("whatsapp")
+            cell.detailTextLabel?.text = l10n("pbms_whatsapp_number_msg")
+            cell.imageView?.image = #imageLiteral(resourceName: "icWhatsApp29Pt")
         }
         
         return cell
@@ -135,6 +141,9 @@ extension ContactUsViewController: UITableViewDelegate {
             UIApplication.shared.open(dialUrl, options: [:], completionHandler: nil)
         case .telegram:
             SocialNetworks.open(.telegram)
+        case .whatsapp:
+            let url = URL(string: "https://wa.me/12405602414")!
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
         
         tableView.deselectRow(at: indexPath, animated: true)

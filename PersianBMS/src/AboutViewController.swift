@@ -59,7 +59,7 @@ extension AboutViewController: UITableViewDataSource {
         case .aboutAndContact:
             return 2
         case .socialNetworks:
-            return 6
+            return 5
         }
     }
     
@@ -116,9 +116,6 @@ extension AboutViewController: UITableViewDataSource {
         case .soundcloud:
             cell.textLabel?.text = l10n("soundcloud")
             cell.imageView?.image = #imageLiteral(resourceName: "icSoundcloud29Pt")
-        case .whatsapp:
-            cell.textLabel?.text = l10n("whatsapp")
-            cell.imageView?.image = #imageLiteral(resourceName: "icWhatsApp29Pt")
         }
         
         cell.imageView?.bounds = CGRect(x: 0, y: 0, width: 24, height: 24)
