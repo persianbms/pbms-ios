@@ -13,7 +13,7 @@ import CoreText
 
 class HomeViewController: UIViewController {
     
-    let acceptableHostSuffixes: [String] = ["persianbahaimedia.org", "addtoany.com", "vimeo.com", "addthis.com"]
+    let acceptableHostSuffixes: [String] = ["persianbahaimedia.org", "addtoany.com", "vimeo.com", "addthis.com", "hotjar.com"]
     private var homeView: HomeView!
     
     // need to retain this somewhere in memory so the observation isn't removed
